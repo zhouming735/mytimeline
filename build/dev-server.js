@@ -4,7 +4,7 @@ if (!process.env.NODE_ENV) process.env.NODE_ENV = JSON.parse(config.dev.env.NODE
 var path = require('path')
 var express = require('express')
 var webpack = require('webpack')
-var opn = require('opn')
+var opn = require('opn')   //打开
 var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = require('./webpack.dev.conf')
 
@@ -35,6 +35,7 @@ compiler.plugin('compilation', function (compilation) {
 
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
+  console.log(proxyTable.toString()+'---------'+context.toString())
   var options = proxyTable[context]
   if (typeof options === 'string') {
     options = { target: options }
@@ -70,6 +71,6 @@ module.exports = app.listen(port, function (err) {
 
   // when env is testing, don't need open it
   if (process.env.NODE_ENV !== 'testing') {
-    opn(uri)
+    opn(uri, {app: 'chrome'}) //指定浏览器打开
   }
 })

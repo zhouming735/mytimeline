@@ -1,6 +1,6 @@
 let fs = require('fs')
 
-let dateTime = new Date('2016-08-31')
+let dateTime = new Date('2016-10-31')
 let types = ['学习', '工作', '运动']
 let fakeContent = ['上课', '做作业', '跑步']
 let fakeTime = [

@@ -2,7 +2,7 @@
   "name": "timeline-x",
   "version": "1.0.0",
   "description": "A Simple Timeline Application",
-  "author": "hongchh <hongchh_sysu@qq.com>",
+  "author": "zhoum <zhouming735@163.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

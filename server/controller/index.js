@@ -1,7 +1,7 @@
 let index = require('express').Router()
 let html = require('fs').readFileSync(__dirname + '/../views/index.html')
 let model = require('../model')
-const PASSWORD = 'hongchh'
+const PASSWORD = '123456'
 
 index.post('/api/add', (req, res) => { // 添加记录
   try {
